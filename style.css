@@ -1,0 +1,904 @@
+/* Importa la fuente de Google Fonts llamada "Poppins" en varios pesos y establece display: swap para optimizar la visualización mientras se carga */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Configuración básica para resetear márgenes, rellenos y utilizar el modelo de caja border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Quita las líneas de subrayado de los enlaces */
+    list-style: none;
+    /* Quita los marcadores de las listas */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    background-color: #080202;
+    /* Color de fondo */
+    font-family: "Poppins", sans-serif;
+    /* Fuente del texto */
+}
+
+/* Contenedor principal con ancho máximo y centrado en la página */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para los botones de navegación previos y siguientes de un carrusel */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-next {
+    color: #DB241B;
+    /* Color del botón siguiente */
+}
+
+.swiper-button-prev {
+    color: #DB241B;
+    /* Color del botón anterior */
+}
+
+/* Estilos para los puntos de paginación de un carrusel */
+.swiper-pagination-bullet {
+    background-color: #D3B2B2;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #DB241B;
+    /* Color del punto activo */
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    position: absolute;
+    /* Posicionamiento absoluto */
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    /* Mostrar como flexbox */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    z-index: 1000;
+    /* Índice de apilamiento alto */
+}
+
+.navbar {
+    display: flex;
+    /* Mostrar como flexbox */
+}
+
+/* Estilos para los elementos del menú */
+.menu-1 {
+    margin-right: 180px;
+}
+
+.menu-2 {
+    margin-left: 180px;
+    display: flex;
+    /* Mostrar como flexbox */
+    align-items: center;
+    /* Alinear verticalmente */
+}
+
+/* Estilos para los logos del menú */
+.logo-1 {
+    width: 0;
+    /* Ancho inicial */
+}
+
+.logo-2 {
+    width: 150px;
+    /* Ancho */
+}
+
+/* Estilos para los iconos sociales */
+.socials {
+    display: flex;
+    /* Mostrar como flexbox */
+}
+
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DB241B;
+    /* Borde */
+    border-radius: 50%;
+    /* Borde redondeado */
+}
+
+.social:hover {
+    background-color: #DB241B;
+    /* Color de fondo al pasar el ratón */
+}
+
+.social img {
+    margin: 8px 0 0 10px;
+}
+
+/* Estilos para los elementos de la lista del menú de navegación */
+.menu .navbar ul li {
+    position: relative;
+    /* Posicionamiento relativo */
+    float: left;
+    /* Flotar a la izquierda */
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    /* Tamaño de fuente */
+    padding: 20px;
+    /* Relleno */
+    color: #FFFFFF;
+    /* Color del texto */
+    display: block;
+    /* Mostrar como bloque */
+}
+
+.menu .navbar ul li a:hover {
+    color: #DB241B;
+    /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para el menú móvil */
+#menu {
+    display: none;
+    /* Ocultar por defecto */
+}
+
+.menu-icon {
+    width: 25px;
+    /* Ancho */
+}
+
+.menu label {
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón */
+    display: none;
+    /* Ocultar por defecto */
+}
+
+/* Estilos para el contenido del encabezado */
+.header-content {
+    margin-top: 20px;
+    /* Margen superior de 20px */
+    padding-bottom: 50px;
+    /* Relleno inferior de 50px */
+}
+
+/* Estilos para el contenedor del slider */
+.slider {
+    display: flex;
+    /* Mostrar como flexbox */
+    align-items: center;
+    /* Alinear verticalmente */
+}
+
+/* Estilos para el texto del slider */
+.slider-txt {
+    margin-left: 85px;
+    /* Margen izquierdo de 85px */
+    width: 50%;
+    /* Ancho del 50% */
+}
+
+/* Estilos para el título del slider */
+.slider-txt h1 {
+    font-size: 70px;
+    /* Tamaño de fuente de 70px */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+}
+
+/* Estilos para el texto del párrafo dentro del slider */
+.slider-txt p {
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    color: #a7a7a7;
+    /* Color de texto gris */
+}
+
+/* Estilos para el contenedor de los botones */
+.botones {
+    margin-top: 50px;
+    /* Margen superior de 50px */
+}
+
+/* Estilos para el botón */
+.btn-1 {
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    padding: 15px 35px;
+    /* Relleno de 15px arriba y abajo, 35px izquierda y derecha */
+    border: 2px solid #DB241B;
+    /* Borde de 2px sólido de color rojo */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    letter-spacing: 2px;
+    /* Espaciado entre caracteres de 2px */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    margin-right: 20px;
+    /* Margen derecho de 20px */
+    border-radius: 50px;
+    /* Radio de borde de 50px (redondeado) */
+}
+
+/* Estilos para el botón cuando se pasa el ratón por encima */
+.btn-1:hover {
+    background-color: #DB241B;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contenedor de imágenes dentro del slider */
+.slider-img {
+    width: 50%;
+    /* Ancho del 50% */
+}
+
+/* Estilos para las imágenes dentro del contenedor del slider */
+.slider-img img {
+    margin-top: 100px;
+    /* Margen superior de 100px */
+    margin-right: 225px;
+    /* Margen derecho de 225px */
+    width: 550px;
+    /* Ancho de la imagen de 550px */
+}
+
+/* Estilos para el contenedor de productos */
+.products {
+    background-color: #0d0d0d;
+    /* Color de fondo */
+}
+
+/* Estilos para los tabs */
+.tabs {
+    display: flex;
+    /* Mostrar como flexbox */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan en varias líneas */
+    padding: 100px 0px;
+    /* Relleno superior e inferior de 100px, relleno izquierdo y derecho de 0px */
+}
+
+/* Estilos para las etiquetas de los tabs */
+.tabs label {
+    width: 15%;
+    /* Ancho del 15% */
+    order: 1;
+    /* Orden del elemento */
+    display: block;
+    /* Mostrar como bloque */
+    padding: 20px 0;
+    /* Relleno de 20px arriba y abajo, 0px izquierda y derecha */
+    text-align: center;
+    /* Alinear texto al centro */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar el ratón */
+    color: #a7a7a7;
+    /* Color del texto gris */
+    font-weight: 700;
+    /* Grosor de la fuente 700 */
+    transition: background ease 0.2s;
+    /* Transición suave del fondo */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+input[type="radio"][name="tabs"] + label {
+    text-align: center;
+    width: 33.33%; /* Asegura que cada label ocupe el 33.33% del ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+
+
+/* Estilos para los tabs */
+.tabs .tab {
+    order: 99;
+    /* Orden del elemento */
+    flex-grow: 1;
+    /* Permitir que el elemento crezca */
+    width: 100%;
+    /* Ancho del 100% */
+    display: none;
+    /* Ocultar por defecto */
+    padding-top: 25px;
+    /* Relleno superior de 25px */
+    
+}
+
+/* Estilos para los inputs de tipo radio dentro de los tabs */
+.tabs input[type="radio"] {
+    display: none;
+    /* Ocultar los inputs de tipo radio */
+}
+
+/* Estilos para las etiquetas de los tabs cuando están seleccionadas */
+.tabs input[type="radio"]:checked + label {
+    border-bottom: 2px solid #DB241B;
+    /* Agregar borde inferior de color rojo */
+    color: #FFFFFF;
+    /* Cambiar color del texto a blanco */
+
+}
+
+.tabs input[type="radio"]:checked + label + .tab{
+    display: block;
+}
+
+/* Estilos para los productos */
+.product {
+    display: flex;
+    /* Mostrar como flexbox */
+    align-items: center;
+    /* Alinear verticalmente */
+    padding: 25px;
+    /* Relleno de 25px */
+    margin: 0 10px;
+    /* Margen de 0 en los lados izquierdo y derecho, 10px en la parte superior e inferior */
+}
+
+/* Estilos para la imagen del producto */
+.product-img {
+    width: 50%;
+    /* Ancho del 50% */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+}
+
+/* Estilos para el título del producto */
+.product-img h4 {
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    padding: 5px 7px;
+    /* Relleno de 5px arriba y abajo, 7px izquierda y derecha */
+    line-height: 15px;
+    /* Altura de línea de 15px */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-size: 14px;
+    /* Tamaño de fuente de 14px */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    border: 2px solid #555555;
+    /* Borde de 2px sólido de color gris */
+    border-radius: 10px;
+    /* Radio de borde de 10px (redondeado) */
+    margin-bottom: 50px;
+    /* Margen inferior de 50px */
+}
+
+/* Estilos para la imagen dentro del contenedor del producto */
+.product-img img {
+    width: 150px;
+    /* Ancho de la imagen de 150px */
+    height: 150px;
+    /* Altura de la imagen de 150px */
+}
+
+/* Estilos para el texto del producto */
+.product-txt {
+    width: 50%;
+    /* Ancho del 50% */
+    margin-left: 10px;
+    /* Margen izquierdo de 10px */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+}
+
+/* Estilos para el título del texto del producto */
+.product-txt h4 {
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    margin-bottom: 5px;
+    /* Margen inferior de 5px */
+}
+
+/* Estilos para el párrafo del texto del producto */
+.product-txt p {
+    color: #a7a7a7;
+    /* Color del texto gris */
+    font-size: 16px;
+    /* Tamaño de fuente de 16px */
+    margin-bottom: 15px;
+    /* Margen inferior de 15px */
+}
+
+/* Estilos para el texto dentro del producto */
+.product-txt span {
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+}
+
+/* Estilos para la sección de información */
+.info {
+    padding: 100px 0px;
+    /* Relleno superior e inferior de 100px, relleno izquierdo y derecho de 0px */
+    display: flex;
+    /* Mostrar como flexbox */
+    align-items: center;
+    /* Alinear verticalmente */
+}
+
+/* Estilos para la imagen de información */
+.info-img {
+    width: 50%;
+    /* Ancho del 50% */
+}
+
+/* Estilos para la imagen dentro del contenedor de información */
+.info-img img {
+    width: 500px;
+    /* Ancho de la imagen de 500px */
+    height: 250px;
+    /* Altura de la imagen de 250px */
+}
+
+/* Estilos para el texto de información */
+.info-txt {
+    width: 50%;
+    /* Ancho del 50% */
+}
+
+/* Estilos para el título del texto de información */
+.info-txt h2 {
+    font-size: 75px;
+    /* Tamaño de fuente de 75px */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    margin-bottom: 25px;
+    /* Margen inferior de 25px */
+}
+
+/* Estilos para el párrafo del texto de información */
+.info-txt p {
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    color: #a7a7a7;
+    /* Color del texto gris */
+    margin-bottom: 50px;
+    /* Margen inferior de 50px */
+}
+
+/* Estilos para el botón 2 */
+.btn-2 {
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+    padding: 15px 35px;
+    /* Relleno de 15px arriba y abajo, 35px izquierda y derecha */
+    background-color: #DB241B;
+    /* Color de fondo */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    border-radius: 50px;
+    /* Radio de borde de 50px (redondeado) */
+}
+
+/* Estilos para los botones cuando se pasa el ratón por encima */
+/*.botones:hover {
+    /*background-color: #DB241B; /* Cambiar el color de fondo al pasar el ratón */
+
+
+/* Estilos para la sección de horario */
+.horario {
+    padding: 100px 0px;
+    /* Relleno superior e inferior de 100px, relleno izquierdo y derecho de 0px */
+    background-color: #0d0d0d;
+    /* Color de fondo */
+}
+
+/* Estilos para el título de información del horario */
+.horario-info h2 {
+    font-size: 75px;
+    /* Tamaño de fuente de 75px */
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-weight: 800;
+    /* Grosor de la fuente 800 (negrita) */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    margin-bottom: 50px;
+    /* Margen inferior de 50px */
+}
+
+/* Estilos para el texto del horario */
+.horario-txt {
+    display: flex;
+    /* Mostrar como flexbox */
+    justify-content: space-between;
+    /* Justificar el contenido entre los elementos */
+}
+
+/* Estilos para el texto */
+.txt {
+    color: #FFFFFF;
+    /* Color del texto blanco */
+}
+
+/* Estilos para el título del texto */
+.txt h4 {
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    color: #a7a7a7;
+    /* Color del texto gris */
+    text-align: center;
+    /* Alinear texto al centro */
+    margin-bottom: 30px;
+    /* Margen inferior de 30px */
+}
+
+/* Estilos para los párrafos del texto */
+.txt p {
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    font-weight: 600;
+    /* Grosor de la fuente 600 (semibold) */
+    margin-bottom: 15px;
+    /* Margen inferior de 15px */
+}
+
+/* Estilos para el título del horario */
+.horario-title {
+    text-align: center;
+    /* Alinear texto al centro */
+}
+
+/* Estilos para la tabla */
+table {
+    margin: 40px 40px;
+    /* Margen de 40px en los lados izquierdo y derecho, 40px arriba y abajo */
+}
+
+/* Estilos para el encabezado de la tabla */
+thead {
+    background: #CCCCCC;
+    /* Fondo gris claro */
+    color: white;
+    /* Color del texto blanco */
+    font-weight: bold;
+    /* Grosor de la fuente en negrita */
+}
+
+/* Estilos para las celdas de la tabla */
+td,
+th {
+    border: 1px solid #FFFFFF;
+    /* Borde sólido de 1px de color blanco */
+    padding: 8px 20px;
+    /* Relleno de 8px arriba y abajo, 20px izquierda y derecha */
+    text-align: center;
+    /* Alinear texto al centro */
+}
+
+/* Estilos para el mapa */
+.map {
+    filter: grayscale(100%) invert(90%) contrast(90%);
+    /* Aplicar filtros de imagen */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    padding: 100px 0px;
+    /* Relleno superior e inferior de 100px, relleno izquierdo y derecho de 0px */
+    display: flex;
+    /* Mostrar como flexbox */
+    justify-content: space-between;
+    /* Justificar el contenido entre los elementos */
+}
+
+/* Estilos para los enlaces del pie de página */
+.links h4 {
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    margin-bottom: 25px;
+    /* Margen inferior de 25px */
+}
+
+/* Estilos para los enlaces de la lista del pie de página */
+.links ul li a {
+    color: #FFFFFF;
+    /* Color del texto blanco */
+    font-size: 16px;
+    /* Tamaño de fuente de 16px */
+    margin-bottom: 5px;
+    /* Margen inferior de 5px */
+    display: inline-block;
+    /* Mostrar como bloque en línea */
+}
+
+@media(max-width: 991px) {
+
+    /* Estilos para el menú en pantallas pequeñas */
+    .menu {
+        padding: 20px;
+        /* Relleno de 20px */
+        justify-content: space-between;
+        /* Justificar el contenido entre los elementos */
+    }
+
+    /* Ocultar el segundo elemento del menú en pantallas pequeñas */
+    .menu-2 {
+        display: none;
+        /* Ocultar */
+    }
+
+    /* Ajustes para el primer logo en pantallas pequeñas */
+    .logo-1 {
+        width: 100px;
+        /* Ancho de 100px */
+    }
+
+    /* Ocultar el segundo logo en pantallas pequeñas */
+    .logo-2 {
+        width: 0;
+        /* Ancho de 0px */
+    }
+
+    /* Mostrar el icono de menú en pantallas pequeñas */
+    .menu label {
+        display: initial;
+        /* Mostrar */
+    }
+
+    /* Estilos para el menú desplegable en pantallas pequeñas */
+    .menu .navbar {
+        position: absolute;
+        /* Posicionamiento absoluto */
+        top: 100%;
+        /* Colocar en la parte inferior del menú */
+        left: 0;
+        /* Alinear a la izquierda */
+        right: 0;
+        /* Alinear a la derecha */
+        background-color: #181818;
+        /* Color de fondo */
+        display: none;
+        /* Ocultar por defecto */
+    }
+
+    /* Ajustes para los elementos de la lista del menú desplegable en pantallas pequeñas */
+    .menu .navbar ul li {
+        width: 100%;
+        /* Ancho del 100% */
+    }
+
+    /* Mostrar el menú desplegable al hacer clic en el icono de menú */
+    #menu:checked~.navbar {
+        display: initial;
+        /* Mostrar */
+    }
+
+    /* Ajustes para el contenido del encabezado en pantallas pequeñas */
+    .header-content {
+        padding: 30px;
+        /* Relleno de 30px */
+        margin-top: 100px;
+        /* Margen superior de 100px */
+    }
+
+    /* Cambiar la dirección del flexbox en el slider para pantallas pequeñas */
+    .slider {
+        flex-direction: column;
+        /* Mostrar en columna */
+    }
+
+    /* Ajustes para el texto del slider en pantallas pequeñas */
+    .slider-txt {
+        margin-left: 0;
+        /* Margen izquierdo de 0 */
+        width: 100%;
+        /* Ancho del 100% */
+        text-align: center;
+        /* Alinear texto al centro */
+        margin-bottom: 50px;
+        /* Margen inferior de 50px */
+    }
+
+    /* Ajustes para el título del slider en pantallas pequeñas */
+    .slider-txt h1 {
+        font-size: 50px;
+        /* Tamaño de fuente de 50px */
+    }
+
+    /* Ajustes para el texto del slider en pantallas pequeñas */
+    .slider-txt p {
+        font-size: 16px;
+        /* Tamaño de fuente de 16px */
+    }
+
+    /* Ajustes para el botón 1 en pantallas pequeñas */
+    .btn-1 {
+        padding: 10px 25px;
+    }
+
+    .slider-img {
+        width: 100%;
+        /* Ancho del 100% */
+        text-align: center;
+        /* Alinear texto al centro */
+    }
+
+
+    .slider-img img {
+        margin-right: 0px;
+        /* Margen derecho de 0px */
+        width: 300px;
+        /* Ancho de la imagen de 300px */
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets,
+    .swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+
+    /* Estilos para las pestañas */
+    .tabs {
+        padding: 50px 30px;
+        /* Relleno de 50px arriba y abajo, 30px izquierda y derecha */
+    }
+
+    /* Estilos para las etiquetas de las pestañas */
+    .tabs label {
+        width: 33%;
+        /* Ancho del 33% */
+    }
+
+    /* Estilos para la sección de información */
+    .info {
+        padding: 30px;
+        /* Relleno de 30px */
+        flex-direction: column;
+        /* Cambiar la dirección del flexbox a columna */
+    }
+
+    /* Estilos para la imagen de la sección de información */
+    .info-img {
+        width: 100%;
+        /* Ancho del 100% */
+        text-align: center;
+        /* Alinear al centro */
+    }
+
+    /* Estilos para la imagen dentro del contenedor de información */
+    .info-img img {
+        width: 400px;
+        /* Ancho de la imagen de 400px */
+        height: 200px;
+        /* Altura de la imagen de 200px */
+        margin-bottom: 25px;
+        /* Margen inferior de 25px */
+    }
+
+    /* Estilos para el texto de la sección de información */
+    .info-txt {
+        width: 100px;
+        /* Ancho de 100px */
+        text-align: center;
+        /* Alinear al centro */
+    }
+
+    /* Estilos para el título del texto de la sección de información */
+    .info-txt h2 {
+        font-size: 50px;
+        /* Tamaño de fuente de 50px */
+    }
+
+    /* Ajustes para el contenido de información en el centro */
+    .info-info {
+        text-align: center;
+        /* Alinear al centro */
+    }
+
+    /* Estilos para el párrafo del texto de la sección de información */
+    .info-txt p {
+        font-size: 16px;
+        /* Tamaño de fuente de 16px */
+    }
+
+    /* Estilos para el botón 1 */
+    .btn-1 {
+        font-size: 16px;
+        /* Tamaño de fuente de 16px */
+    }
+
+    /* Estilos para la sección de horario */
+    .horario {
+        padding: 30px;
+        /* Relleno de 30px */
+        text-align: center;
+        /* Alinear al centro */
+    }
+
+    /* Estilos para el título de información del horario */
+    .horario-info h2 {
+        font-size: 50px;
+        /* Tamaño de fuente de 50px */
+        margin-bottom: 15px;
+        /* Margen inferior de 15px */
+    }
+
+    /* Ajustes para el texto del horario en columna */
+    .horario-txt {
+        flex-direction: column;
+        /* Cambiar la dirección del flexbox a columna */
+    }
+
+    /* Estilos para la tabla */
+    table {
+        margin: auto;
+        /* Margen automático para centrar */
+        margin-bottom: 15px;
+        /* Margen inferior de 15px */
+    }
+
+    /* Estilos para las redes sociales */
+    .socials {
+        justify-content: center;
+        /* Justificar el contenido al centro */
+    }
+
+    /* Ajustes para las imágenes de las redes sociales */
+    .social img {
+        margin: 8px 0 0 0;
+        /* Margen superior de 8px */
+    }
+
+    /* Estilos para el pie de página */
+    .footer {
+        padding: 30px;
+        /* Relleno de 30px */
+        flex-direction: column;
+        /* Cambiar la dirección del flexbox a columna */
+        text-align: center;
+        /* Alinear al centro */
+    }
+
+    /* Ajustes para el título del pie de página */
+    .links h4 {
+        margin: 25px 0px 10px 0;
+        /* Margen superior de 25px, margen derecho de 0px, margen inferior de 10px, margen izquierdo de 0px */
+    }
+
+}
